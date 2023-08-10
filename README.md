@@ -33,3 +33,7 @@ server.port = 9000
 mvn clean install
 ```
 
+## Run as a Jar
+```bash
+java -jar target/webapplication-0.0.1-SNAPSHOT.jar
+```

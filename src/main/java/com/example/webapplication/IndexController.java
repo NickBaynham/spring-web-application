@@ -9,17 +9,15 @@ import java.util.List;
 @Controller
 public class IndexController {
 
-    record Video(String name) {}
+    private final VideoService videoService;
 
-    List<Video> videos = List.of(
-        new Video("Need HELP with your SPRING BOOT 3?"),
-        new Video("Do not do THIS to your own CODE!"),
-        new Video("SECRETS to fix BROKEN CODE!")
-    );
+    public IndexController(VideoService videoService) {
+        this.videoService = videoService;
+    }
 
     @GetMapping("/")
     public String index(Model model) {
-        model.addAttribute("videos", videos);
+        model.addAttribute("videos", videoService.getVideos());
         return "index";
     }
 }
