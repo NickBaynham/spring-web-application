@@ -37,3 +37,10 @@ mvn clean install
 ```bash
 java -jar target/webapplication-0.0.1-SNAPSHOT.jar
 ```
+
+## Test the REST api endpoints
+```bash
+curl -v -X POST localhost:8080/api/videos -d \
+  '{"name": "Learning Spring Boot 3"}' -H 'Content-type:application/json'
+curl -v localhost:8080/api/videos  
+```
