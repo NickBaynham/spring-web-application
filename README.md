@@ -30,7 +30,7 @@ server.port = 9000
 
 ## Build the Project
 ```bash
-mvn clean install
+./mvnw clean install
 ```
 
 ## Run as a Jar
