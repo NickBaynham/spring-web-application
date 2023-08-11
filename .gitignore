@@ -18,6 +18,7 @@ buildNumber.properties
 
 # Node related resources
 node/
+node_modules/
 
 # IntelliJ
 .DS_Store
